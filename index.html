@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FitApp - Mobile App HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+            }
+    
+            .pra-header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 30px;
+                background: linear-gradient(90deg, #1e3c72, #2a5298); /* Updated gradient background */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                color: #fff;
+            }
+    
+            .in-sv-header-top-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 5px 10px;
+            }
+    
+            .in-sv-header-cta {
+                display: flex;
+                align-items: center;
+            }
+    
+            .in-sv-header-cta ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+    
+            .in-sv-header-cta ul li {
+                display: flex;
+                align-items: center;
+            }
+    
+            .in-sv-header-cta ul li a {
+                display: block;
+                font-size: 20px;
+                color: #fff;
+                text-decoration: none; /* No underline */
+                transition: transform 0.3s ease;
+            }
+    
+            .in-sv-header-cta ul li a:hover {
+                transform: scale(1.2);
+            }
+    
+            /* Icon Colors */
+            .fa-envelope {
+                color: #ea4335; /* Gmail Red */
+            }
+    
+            .fa-globe {
+                color: #ff6f00; /* JustDial Orange */
+            }
+    
+            .fa-google-drive {
+                color: #0f9d58; /* Google Drive Green */
+            }
+    
+            .fa-store {
+                color: #4285f4; /* Google Store Blue */
+            }
+    
+            .fa-briefcase {
+                color: #fbbc05; /* Google Business Yellow */
+            }
+    
+            .fa-map-marker-alt {
+                color: #ea4335; /* Google Maps Red */
+            }
+    
+            .fa-phone {
+                color: #34b7f1; /* Phone Blue */
+            }
+    
+            .cta-buttons {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+    
+            .cta-buttons a {
+                background-color: rgba(255, 255, 255, 0.8);
+                color: #007bff;
+                padding: 8px 16px;
+                border-radius: 20px;
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+    
+            .cta-buttons a:nth-child(2) {
+                background-color: rgba(255, 255, 255, 0.8);
+                color: #28a745;
+            }
+    
+            .cta-buttons a:hover {
+                background-color: #fff;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+    
+            @media (max-width: 768px) {
+                .in-sv-header-cta ul {
+                    gap: 15px;
+                }
+    
+                .cta-buttons a {
+                    font-size: 12px;
+                    padding: 6px 12px;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .in-sv-header-top-content {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+    
+                .in-sv-header-cta {
+                    margin-bottom: 15px;
+                }
+    
+                .cta-buttons {
+                    display: none; /* Hide buttons in mobile view */
+                }
+            }
+        </style>
+    
+        <div id="pra-header" class="pra-header-container">
+            <div class="in-sv-header-top-content">
+                <!-- Left Side: Icons -->
+                <div class="in-sv-header-cta">
+                    <ul>
+                        <li>
+                            <a href="mailto:info@example.com">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.justdial.com/" target="_blank">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://drive.google.com/" target="_blank">
+                                <i class="fa-brands fa-google-drive"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.indiamart.com/" target="_blank">
+                                <i class="fa-solid fa-store"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/business/" target="_blank">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Hare+Krishna%2C+Vizag%2C+Andhra+Pradesh+-530001+Visakhapatnam" target="_blank">
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:002343474383">
+                                <i class="fa-solid fa-phone"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Right Side: Buttons -->
+                <div class="cta-buttons">
+                    <a href="#">
+                        Sign Up
+                    </a>
+                    <a href="#">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">FitApp</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#feature" class="nav-item nav-link">Services</a>
+                        <a href="#calculator" class="nav-item nav-link">Calculator</a>
+                        <a href="#review" class="nav-item nav-link">Review</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <!-- <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Start Free Trial</a> -->
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated slideInDown">The Trusted App That Secures Your Family's Future</h1>
+                            <p class="text-white pb-3 animated slideInDown">
+                                Secure your loved ones with LIC's range of insurance plans. Whether it's life insurance, health coverage, or investment opportunities, we provide customized solutions to safeguard your future. Trust LIC, the nation's leading life insurer, for financial stability and peace of mind.
+                            </p>
+                            
+                            <a href="#about" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
+                            <a href="#contact" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="owl-carousel screenshot-carousel">
+                                <img class="img-fluid" src="img/screenshot-1.png" alt="">
+                                <img class="img-fluid" src="img/screenshot-2.png" alt="">
+                                <img class="img-fluid" src="img/screenshot-3.png" alt="">
+                                <img class="img-fluid" src="img/screenshot-4.png" alt="">
+                                <img class="img-fluid" src="img/screenshot-5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5" id="about">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">About Us</h5>
+                        <h1 class="mb-4">India's Leading Insurance Provider</h1>
+                        <p class="mb-4">For decades, LIC has been the most trusted life insurer, helping millions of families achieve financial security. Our mission is to offer comprehensive insurance solutions tailored to your needs, ensuring a brighter and secure future for you and your loved ones.</p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="d-flex">
+                                    <i class="fa fa-shield fa-2x text-primary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <!-- <h2 class="mb-0" data-toggle="counter-up">100M+</h2> -->
+                                        <p class="text-primary-gradient mb-0">Policies Issued</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="d-flex">
+                                    <i class="fa fa-smile fa-2x text-secondary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <!-- <h2 class="mb-0" data-toggle="counter-up">1M+</h2> -->
+                                        <p class="text-secondary-gradient mb-0">Happy Clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#feature" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- About End -->
+
+
+        <!-- Features Start -->
+        <div class="container-xxl py-5" id="feature">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Our Services</h5>
+                    <h1 class="mb-5">Comprehensive Insurance Plans</h1>
+                </div>
+                <div class="row g-4">
+                    <!-- Life Insurance -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-heartbeat text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Life Insurance</h5>
+                            <p class="m-0">Secure the future of your loved ones with our trusted life insurance plans, ensuring financial stability in times of need.</p>
+                        </div>
+                    </div>
+                    <!-- Car Insurance -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-car text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Car Insurance</h5>
+                            <p class="m-0">Drive with peace of mind knowing your vehicle is protected with comprehensive car insurance coverage.</p>
+                        </div>
+                    </div>
+                    <!-- Health Insurance -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-hospital-alt text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Health Insurance</h5>
+                            <p class="m-0">Get access to the best healthcare services with our health insurance plans that provide comprehensive coverage for medical expenses.</p>
+                        </div>
+                    </div>
+                    <!-- Credit Card Insurance -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-credit-card text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Credit Card Insurance</h5>
+                            <p class="m-0">Protect your finances from fraud or theft with our specialized credit card insurance plans.</p>
+                        </div>
+                    </div>
+                    <!-- Transport Insurance -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-truck text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Transport Insurance</h5>
+                            <p class="m-0">Ensure the safety of your goods during transit with our reliable transport insurance coverage.</p>
+                        </div>
+                    </div>
+                    <!-- Child Insurance -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
+                                <i class="fa fa-child text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb3">Child Insurance</h5>
+                            <p class="m-0">Plan for your child’s future with our child insurance policies that provide financial security for education and other needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features End -->
+
+
+        <!-- Screenshot Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <!-- LIC Features Text Section -->
+                    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">Features</h5>
+                        <h1 class="mb-4">User-Friendly Interface and Easy Access to LIC Services</h1>
+                        <p class="mb-4">Explore a seamless experience with LIC's easy-to-use interface, offering a variety of insurance plans tailored to your needs. With just a few clicks, manage policies, payments, and more from the comfort of your home.</p>
+                        <p><i class="fa fa-check text-primary-gradient me-3"></i>Easy access to all LIC plans and services</p>
+                        <p><i class="fa fa-check text-primary-gradient me-3"></i>Quick and simple online payments</p>
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>Track policy status and claims efficiently</p>
+                        <!-- <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a> -->
+                    </div>
+                    <!-- Screenshot Section -->
+                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="owl-carousel screenshot-carousel">
+                            <img class="img-fluid" src="img/screenshot-1.png" alt="LIC Portal Interface">
+                            <img class="img-fluid" src="img/screenshot-2.png" alt="LIC Policy Management">
+                            <img class="img-fluid" src="img/screenshot-3.png" alt="LIC Payment Gateway">
+                            <img class="img-fluid" src="img/screenshot-4.png" alt="LIC Mobile App Interface">
+                            <img class="img-fluid" src="img/screenshot-5.png" alt="LIC Dashboard">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Screenshot End -->
+
+
+        <!-- Process Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">How It Works</h5>
+                    <h1 class="mb-5">3 Easy Steps</h1>
+                </div>
+                <div class="row gy-5 gx-4 justify-content-center">
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-cog fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">Select Your LIC Plan</h5>
+                            <p class="mb-0">Choose from a variety of LIC insurance plans tailored to suit your needs. Whether it's life, health, or car insurance, we've got you covered.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-address-card fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">Complete Your Profile</h5>
+                            <p class="mb-0">Provide your personal details and preferences to customize your LIC policy experience. Ensure that all information is accurate for a smooth process.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-check fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">Get Insured</h5>
+                            <p class="mb-0">Submit your application and enjoy the benefits of being insured by LIC. Stay protected and secure your future with trusted LIC plans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Process Start -->
+
+
+        <!-- Download Start -->
+        <!-- <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/about.png">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class="text-primary-gradient fw-medium">Download</h5>
+                        <h1 class="mb-4">Download The Latest Version Of Our App</h1>
+                        <p class="mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo eirmod magna dolore erat amet</p>
+                        <div class="row g-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <a href="" class="d-flex bg-primary-gradient rounded py-3 px-4">
+                                    <i class="fab fa-apple fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <p class="text-white mb-0">Available On</p>
+                                        <h5 class="text-white mb-0">App Store</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <a href="" class="d-flex bg-secondary-gradient rounded py-3 px-4">
+                                    <i class="fab fa-android fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <p class="text-white mb-0">Available On</p>
+                                        <h5 class="text-white mb-0">Play Store</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- Download End -->
+
+
+        <!-- Pricing Start -->
+        <h5 class="text-primary-gradient fw-medium" style="text-align: center;">Calculator</h5>
+        <div class="calculator-container" id="calculator" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1200px; width: 90%; margin-top: 20px;"><!-- Future Value Calculator -->
+            <div class="calculator" style="width: 100%; max-width: 500px; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
+            <h1 style="text-align: center; margin-bottom: 20px; color: #333;">Future value calculator</h1>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="present-amount-future" style="display: block; margin-bottom: 5px; color: #555;">Present amount (₹)</label> <input type="number" id="present-amount-future" value="0" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="interest-rate-future" style="display: block; margin-bottom: 5px; color: #555;">Manual rate(%)</label> <input type="number" id="interest-rate-future" value="10" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="loan-period-future" style="display: block; margin-bottom: 5px; color: #555;">No. of years to receive amount</label> <input type="number" id="loan-period-future" value="10" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="rest-option-future" style="display: block; margin-bottom: 5px; color: #555;">Compounding mode</label><select id="rest-option-future" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            <option value="monthly">Annually</option>
+            <option value="yearly">Yearly</option>
+            <option value="monthly">Half-Yearly</option>
+            <option value="yearly">Quarterly</option>
+            <option value="yearly">Monthly</option>
+            <option value="monthly">15 Days</option>
+            <option value="yearly">7 Days</option>
+            <option value="yearly">Daily</option>
+            </select></div>
+            <button class="btn" onclick="calculateFutureValue()" style="width: 100%; padding: 12px; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Calculate Future Value</button> <!-- Clear button for Future Value Calculator --> <button class="btn" onclick="clearFields(3)" style="width: 100%; padding: 12px; color: #fff; background-color: #dc3545; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Clear</button>
+            <div id="result-future" class="result" style="margin-top: 20px; padding: 15px; background-color: #f0f8ff; border: 1px solid #cce7ff; border-radius: 5px; text-align: center; font-size: 18px; color: #333;"></div>
+            </div>
+            <!-- Fixed Deposit Calculator -->
+            <div class="calculator" style="width: 100%; max-width: 500px; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
+            <h1 style="text-align: center; margin-bottom: 20px; color: #333;">Fixed deposit calculator</h1>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="principal-amount" style="display: block; margin-bottom: 5px; color: #555;">Principal amount (₹)</label> <input type="number" id="principal-amount" value="100000" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="interest-rate-2" style="display: block; margin-bottom: 5px; color: #555;">Manual rate (%)</label> <input type="number" id="interest-rate-2" value="10" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="compounding-option" style="display: block; margin-bottom: 5px; color: #555;">Interest compounding</label><select id="compounding-option" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            <option value="monthly">Annually</option>
+            <option value="yearly">Yearly</option>
+            <option value="monthly">Half-Yearly</option>
+            <option value="yearly">Quarterly</option>
+            <option value="yearly">Monthly</option>
+            <option value="monthly">15 Days</option>
+            <option value="yearly">7 Days</option>
+            <option value="yearly">Daily</option>
+            </select></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="loan-period-2" style="display: block; margin-bottom: 5px; color: #555;">Loan period (months)</label> <input type="number" id="loan-period-2" value="12" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <button class="btn" onclick="calculateFD()" style="width: 100%; padding: 12px; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Calculate interest</button> <!-- Clear button for Fixed Deposit Calculator --> <button class="btn" onclick="clearFields(2)" style="width: 100%; padding: 12px; color: #fff; background-color: #dc3545; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Clear</button>
+            <div id="result-2" class="result" style="margin-top: 20px; padding: 15px; background-color: #f0f8ff; border: 1px solid #cce7ff; border-radius: 5px; text-align: center; font-size: 18px; color: #333;"></div>
+            </div>
+            <!-- Present Value Calculator -->
+            <div class="calculator" style="width: 100%; max-width: 500px; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
+            <h1 style="text-align: center; margin-bottom: 20px; color: #333;">Present value calculator</h1>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="interest-rate-3" style="display: block; margin-bottom: 5px; color: #555;">Manual Rate(%)</label> <input type="number" id="interest-rate-3" value="10" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="loan-period-3" style="display: block; margin-bottom: 5px; color: #555;">No. of years to receive amount</label> <input type="number" id="loan-period-3" value="10" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="rest-option-3" style="display: block; margin-bottom: 5px; color: #555;">Compounding mode</label><select id="rest-option-3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            <option value="monthly">Annually</option>
+            <option value="yearly">Yearly</option>
+            <option value="monthly">Half-Yearly</option>
+            <option value="yearly">Quarterly</option>
+            <option value="yearly">Monthly</option>
+            <option value="monthly">15 Days</option>
+            <option value="yearly">7 Days</option>
+            <option value="yearly">Daily</option>
+            </select></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="future-amount" style="display: block; margin-bottom: 5px; color: #555;">Future amount (₹)</label> <input type="number" id="future-amount" value="0" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <button class="btn" onclick="calculatePresentValue()" style="width: 100%; padding: 12px; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Calculate present value</button> <!-- Clear button for Present Value Calculator --> <button class="btn" onclick="clearFields(1)" style="width: 100%; padding: 12px; color: #fff; background-color: #dc3545; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Clear</button>
+            <div id="result-3" class="result" style="margin-top: 20px; padding: 15px; background-color: #f0f8ff; border: 1px solid #cce7ff; border-radius: 5px; text-align: center; font-size: 18px; color: #333;"></div>
+            </div>
+            <!-- Recurring Deposit Calculator -->
+            <div class="calculator" style="width: 100%; max-width: 500px; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
+            <h1 style="text-align: center; margin-bottom: 20px; color: #333;">Recurring deposit calculator</h1>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="monthly-deposit" style="display: block; margin-bottom: 5px; color: #555;">Monthly deposit (₹)</label> <input type="number" id="monthly-deposit" value="5000" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="annual-interest-rate" style="display: block; margin-bottom: 5px; color: #555;">Manual rate (%)</label> <input type="number" id="annual-interest-rate" value="8" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="compounding-frequency" style="display: block; margin-bottom: 5px; color: #555;">Compounding frequency</label><select id="compounding-frequency" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            <option value="monthly">Annually</option>
+            <option value="yearly">Yearly</option>
+            <option value="monthly">Half-Yearly</option>
+            <option value="yearly">Quarterly</option>
+            <option value="yearly">Monthly</option>
+            <option value="monthly">15 Days</option>
+            <option value="yearly">7 Days</option>
+            <option value="yearly">Daily</option>
+            </select></div>
+            <div class="form-group" style="margin-bottom: 15px;"><label for="period-months" style="display: block; margin-bottom: 5px; color: #555;">Period (months)</label> <input type="number" id="period-months" value="60" style="width: calc(100% - 20px); padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></div>
+            <button class="btn" onclick="calculateRecurringDeposit()" style="width: 100%; padding: 12px; color: #fff; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Calculate maturity value</button> <!-- Clear button for Recurring Deposit Calculator --> <button class="btn" onclick="clearFields(4)" style="width: 100%; padding: 12px; color: #fff; background-color: #dc3545; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px;">Clear</button>
+            <div id="result-4" class="result" style="margin-top: 20px; padding: 15px; background-color: #f0f8ff; border: 1px solid #cce7ff; border-radius: 5px; text-align: center; font-size: 18px; color: #333;"></div>
+            </div>
+            </div>
+            <p>
+            <script type="text/javascript">
+            
+            
+            function formatNumberWithCommas(number) {
+                return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            
+                   // Function to calculate Future Value
+            function calculateFutureValue() {
+                // Retrieve inputs
+                var presentAmount = parseFloat(document.getElementById('present-amount-future').value);
+                var interestRate = parseFloat(document.getElementById('interest-rate-future').value);
+                var years = parseFloat(document.getElementById('loan-period-future').value);
+                var compoundingMode = document.getElementById('rest-option-future').value;
+            
+                // Perform calculation based on compounding mode
+                var periodsPerYear = compoundingMode === 'monthly' ? 12 : 1;
+                var interestPerPeriod = interestRate / (100 * periodsPerYear);
+                var periods = years * periodsPerYear;
+            
+                var futureValue = presentAmount * Math.pow(1 + interestPerPeriod, periods);
+            
+                // Display result with commas
+                document.getElementById('result-future').innerText = 'Future Value: ₹ ' + formatNumberWithCommas(futureValue.toFixed(2));
+            }
+            
+            // Function to calculate Fixed Deposit Interest
+            function calculateFD() {
+                // Retrieve inputs
+                var principalAmount = parseFloat(document.getElementById('principal-amount').value);
+                var interestRate = parseFloat(document.getElementById('interest-rate-2').value);
+                var compoundingOption = document.getElementById('compounding-option').value;
+                var months = parseFloat(document.getElementById('loan-period-2').value);
+            
+                // Perform calculation based on compounding option
+                var periodsPerYear = compoundingOption === 'monthly' ? 12 : (compoundingOption === 'quarterly' ? 4 : (compoundingOption === 'half-yearly' ? 2 : 1));
+                var interestPerPeriod = interestRate / (100 * periodsPerYear);
+                var periods = months / 12 * periodsPerYear;
+            
+                var maturityAmount = principalAmount * Math.pow(1 + interestPerPeriod, periods);
+            
+                // Display result with commas
+                document.getElementById('result-2').innerText = 'Maturity Amount: ₹ ' + formatNumberWithCommas(maturityAmount.toFixed(2));
+            }
+            
+            // Function to calculate Present Value
+            function calculatePresentValue() {
+                // Retrieve inputs
+                var interestRate = parseFloat(document.getElementById('interest-rate-3').value);
+                var years = parseFloat(document.getElementById('loan-period-3').value);
+                var compoundingMode = document.getElementById('rest-option-3').value;
+                var futureAmount = parseFloat(document.getElementById('future-amount').value);
+            
+                // Perform calculation based on compounding mode
+                var periodsPerYear = compoundingMode === 'monthly' ? 12 : 1;
+                var interestPerPeriod = interestRate / (100 * periodsPerYear);
+                var periods = years * periodsPerYear;
+            
+                var presentValue = futureAmount / Math.pow(1 + interestPerPeriod, periods);
+            
+                // Display result with commas
+                document.getElementById('result-3').innerText = 'Present Value: ₹ ' + formatNumberWithCommas(presentValue.toFixed(2));
+            }
+            
+            // Function to calculate Recurring Deposit Maturity Value
+            function calculateRecurringDeposit() {
+                // Retrieve inputs
+                var monthlyDeposit = parseFloat(document.getElementById('monthly-deposit').value);
+                var annualInterestRate = parseFloat(document.getElementById('annual-interest-rate').value);
+                var compoundingFrequency = document.getElementById('compounding-frequency').value;
+                var months = parseFloat(document.getElementById('period-months').value);
+            
+                // Perform calculation based on compounding frequency
+                var periodsPerYear = compoundingFrequency === 'monthly' ? 12 : (compoundingFrequency === 'quarterly' ? 4 : 1);
+                var interestPerPeriod = annualInterestRate / (100 * periodsPerYear);
+                var periods = months / periodsPerYear;
+            
+                var maturityValue = monthlyDeposit * (((Math.pow(1 + interestPerPeriod, periods) - 1) / interestPerPeriod) * (1 + interestPerPeriod));
+            
+                // Display result with commas
+                document.getElementById('result-4').innerText = 'Maturity Value: ₹ ' + formatNumberWithCommas(maturityValue.toFixed(2));
+            }
+            
+            
+                    // Function to clear fields based on calculator type
+                    function clearFields(calculatorType) {
+                        switch (calculatorType) {
+                            case 1:
+                                // Clear Present Value Calculator fields
+                                document.getElementById('interest-rate-3').value = '10';
+                                document.getElementById('loan-period-3').value = '10';
+                                document.getElementById('rest-option-3').value = 'monthly';
+                                document.getElementById('future-amount').value = '0';
+                                document.getElementById('result-3').innerText = '';
+                                break;
+                            case 2:
+                                // Clear Fixed Deposit Calculator fields
+                                document.getElementById('principal-amount').value = '100000';
+                                document.getElementById('interest-rate-2').value = '10';
+                                document.getElementById('compounding-option').value = 'monthly';
+                                document.getElementById('loan-period-2').value = '12';
+                                document.getElementById('result-2').innerText = '';
+                                break;
+                            case 3:
+                                // Clear Future Value Calculator fields
+                                document.getElementById('present-amount-future').value = '0';
+                                document.getElementById('interest-rate-future').value = '10';
+                                document.getElementById('loan-period-future').value = '10';
+                                document.getElementById('rest-option-future').value = 'monthly';
+                                document.getElementById('result-future').innerText = '';
+                                break;
+                            case 4:
+                                // Clear Recurring Deposit Calculator fields
+                                document.getElementById('monthly-deposit').value = '5000';
+                                document.getElementById('annual-interest-rate').value = '8';
+                                document.getElementById('compounding-frequency').value = 'monthly';
+                                document.getElementById('period-months').value = '60';
+                                document.getElementById('result-4').innerText = '';
+                                break;
+                            default:
+                                console.log('Invalid calculator type.');
+                                break;
+                        }
+                    }
+                </script>
+            </p>
+        <!-- Pricing End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5" id="review">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Testimonial</h5>
+                    <h1 class="mb-5">What Our LIC Clients Say!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-1.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Rahul Sharma</h5>
+                                <p class="mb-1">Businessman</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">LIC's comprehensive plans have given me peace of mind. Their team helped me choose the right policy for my business and personal needs.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-2.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Anjali Mehta</h5>
+                                <p class="mb-1">Teacher</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">The policies from LIC are affordable and give me the protection I need for my family. The service is reliable, and the customer support is fantastic!</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-3.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Vikram Singh</h5>
+                                <p class="mb-1">Engineer</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">I’ve been a loyal customer of LIC for over a decade. The flexibility and coverage of their plans have been a perfect fit for my growing family.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-4.jpg" style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Ritika Desai</h5>
+                                <p class="mb-1">Entrepreneur</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">The support I received from LIC when purchasing my life insurance policy was amazing. Their plans are transparent and suit my lifestyle perfectly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonial End -->
+
+
+        <!-- Contact Start -->
+        <div class="container-xxl py-5" id="contact">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Contact Us</h5>
+                    <h1 class="mb-5">Get In Touch!</h1>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <!-- <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px" required></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary-gradient rounded-pill py-3 px-5" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <script>
+                                document.getElementById('contactForm').addEventListener('submit', function (e) {
+                                    e.preventDefault(); // Prevent the form from submitting in the traditional way
+                            
+                                    // Get form data
+                                    var name = document.getElementById('name').value;
+                                    var email = document.getElementById('email').value;
+                                    var subject = document.getElementById('subject').value;
+                                    var message = document.getElementById('message').value;
+                            
+                                    // Construct the WhatsApp message text
+                                    var whatsappMessage = `Hello, I am ${name}. My email is ${email}. Subject: ${subject}. Message: ${message}.`;
+                            
+                                    // WhatsApp URL with pre-filled message
+                                    var whatsappURL = `https://wa.me/9844151544?text=${encodeURIComponent(whatsappMessage)}`;
+                            
+                                    // Open WhatsApp URL
+                                    window.open(whatsappURL, '_blank');
+                                });
+                            </script>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Address</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://twitter.com/login" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/login" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/accounts/login" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/login" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Quick Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Services</a>
+                        <a class="btn btn-link" href="">Calculator</a>
+                        <a class="btn btn-link" href="">Review</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Popular Link</h4>
+                        <!-- <a class="btn btn-link" href=""></a> -->
+                        
+                        <a class="btn btn-link" href="./policy.html">Privacy Policy</a>
+                        <a class="btn btn-link" href="./terms.html">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Digital marketing</a>
+                        <a class="btn btn-link" href="">WhatsApp crm</a>
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Delta team</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://deltateam.in">Delta team</a>
+                        </div>
+                        <!-- <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <div class="floating-icons">
+            <a href="https://wa.me/yourwhatsapplink" target="_blank" class="icon whatsapp" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/yourinstagram" target="_blank" class="icon instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/yourtwitter" target="_blank" class="icon twitter" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <style>
+            .floating-icons {
+            position: fixed;
+            right: 40px;
+            bottom: 98px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Space between icons */
+        }
+        
+        /* Floating icon styles */
+        .floating-icons .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px; /* Adjust icon size */
+            height: 50px; /* Adjust icon size */
+            background-color: #fff; /* Background color (optional) */
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow */
+            color: #000; /* Default icon color */
+            font-size: 24px; /* Font Awesome icon size */
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none; /* Remove underline */
+        }
+        
+        /* Icon color changes on hover */
+        .floating-icons .whatsapp {
+            color: #25D366; /* WhatsApp brand color */
+        }
+        
+        .floating-icons .instagram {
+            color: #E4405F; /* Instagram brand color */
+        }
+        
+        .floating-icons .twitter {
+            color: #1DA1F2; /* Twitter brand color */
+        }
+        
+        /* Hover effects */
+        .floating-icons .icon:hover {
+            background-color: #000; /* Background color on hover (can be adjusted) */
+            color: #fff; /* Icon color on hover */
+            transform: scale(1.1); /* Slightly increase size on hover */
+        }
+        </style>
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
